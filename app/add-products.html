@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+</head>
+
+<body>
+
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="border-end bg-white" id="sidebar-wrapper">
+            <div class="sidebar-heading border-bottom bg-light">Start Bootstrap</div>
+            <div class="list-group list-group-flush">
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="index.html">Home</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="list-products.html">Product List</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3 active" href="add-products.html">Add Product</a>
+            </div>
+        </div>
+
+        <!-- Page content wrapper -->
+        <div id="page-content-wrapper">
+            <!-- Top navigation -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <div class="container-fluid">
+                    <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="list-products.html">Products</a></li>
+                            <li class="nav-item active"><a class="nav-link" href="add-products.html">Add Product</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Form for Adding Product -->
+            <div class="container py-4">
+                <h2 class="mb-4">Add New Product</h2>
+                <form id="add-product-form" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="productPhoto" class="form-label">Product Photo</label>
+                        <input type="file" class="form-control" id="productPhoto" accept="image/*" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="productTitle" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="productTitle" placeholder="Enter product title" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="productDescription" class="form-label">Description</label>
+                        <textarea class="form-control" id="productDescription" rows="3" maxlength="100" placeholder="Enter product description (max 100 characters)" required></textarea>
+                        <small class="text-muted" id="charCount">100 characters remaining</small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="productPrice" class="form-label">Price ($)</label>
+                        <input type="number" class="form-control" id="productPrice" step="0.01" min="0" placeholder="Enter price" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="productQuantity" class="form-label">Quantity</label>
+                        <input type="number" class="form-control" id="productQuantity" min="1" placeholder="Enter quantity" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-success w-100">Add Product</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
